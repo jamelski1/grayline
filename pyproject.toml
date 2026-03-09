@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grayline"
+version = "0.1.0"
+description = "Strategic monitoring and analytics platform for measuring policy effectiveness through quantifiable indicators"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+dependencies = [
+    "pandas>=2.1",
+    "requests>=2.31",
+    "plotly>=5.18",
+    "streamlit>=1.29",
+    "statsmodels>=0.14",
+    "numpy>=1.26",
+    "pydantic>=2.5",
+    "python-dotenv>=1.0",
+    "duckdb>=0.9",
+    "sqlalchemy>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "black>=23.12",
+    "ruff>=0.1",
+    "pre-commit>=3.6",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+
+[tool.black]
+target-version = ["py312"]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

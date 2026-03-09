@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Environment
+.env
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Data (keep structure, ignore large files)
+data/raw/*.json
+data/raw/*.csv
+data/processed/*.csv
+data/processed/*.parquet
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/analytic/.gitkeep
+
+# Outputs
+outputs/charts/*.png
+outputs/charts/*.html
+outputs/reports/*.pdf
+outputs/reports/*.html
+!outputs/charts/.gitkeep
+!outputs/reports/.gitkeep
+
+# Database
+*.db
+*.duckdb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/secrets.toml
