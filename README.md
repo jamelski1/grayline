@@ -1,0 +1,2 @@
+# grayline
+Quantifying strategy assessments
